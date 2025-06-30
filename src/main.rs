@@ -13,7 +13,7 @@ async fn main() -> anyhow::Result<()> {
 
     let addr: std::net::SocketAddr = "0.0.0.0:8080".parse()?;
     let listener = TcpListener::bind(addr).await?;
-    println!("🚀 Server listening on http://{}", addr);
+    println!(" Server listening on http://{}", addr);
 
     axum::serve(listener, app).await?;
     Ok(())
